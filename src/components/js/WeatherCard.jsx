@@ -166,9 +166,6 @@ export default function WeatherCard(props) {
     /// For each loop, we create a div, and inside it we loop over the corresponding fiveDayForcast item (ex. first loop goes through first item, second loop through second, etc.) We push each div into the reportDays
 
     if(fiveDayForcast.length > 0) {
-        // const isSixDays = weatherData.length === 6;
-        // for (let i = 0; i < (isSixDays ? 6 : 5); i++)
-        
         for (let i = 0; i < fiveDayForcast.length; i++) {
             weaklyReport.push(
                 <div className="report-card" key={i}>
