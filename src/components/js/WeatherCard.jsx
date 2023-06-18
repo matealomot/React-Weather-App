@@ -59,7 +59,7 @@ export default function WeatherCard(props) {
 
     useEffect(() => {
         if(cityCoordinates.latitude != "" && cityCoordinates.longitude != "") {
-            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityCoordinates.latitude}&lon=${cityCoordinates.longitude}&appid=124cb4ee8efd323b7c8ca53cfc177baa`)
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityCoordinates.latitude}&lon=${cityCoordinates.longitude}&appid={here goes your personal api key}`)
             .then(response => response.json())
             .then(data => {
                 const dataArray = data.list;
