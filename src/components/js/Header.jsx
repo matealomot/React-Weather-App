@@ -17,7 +17,7 @@ export default function Header(props) {
     function searchWeather(e) {
         if(e.type === 'click' || e.key === 'Enter') {
             if(inputValue != "") {
-                fetch(`https://api.openweathermap.org/data/2.5/find?q=${inputValue}&appid=1be1041608a8f4a3ee68fe0f45d7a3f6`)
+                fetch(`https://api.openweathermap.org/data/2.5/find?q=${inputValue}&appid={here goes your personal api key}`)
                 .then(response => response.json())
                 .then(data => props.handleSearch(data.list))
                 .catch(err => console.log(err))
