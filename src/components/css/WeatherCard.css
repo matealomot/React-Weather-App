@@ -14,6 +14,15 @@
     --coldBorder: #0101aa;
 }
 
+.loader {
+    margin-inline: auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--backgroundColorOne);
+    width: 30vw;
+    border-radius: 10px;
+}
+
 .cold {
     background-color: var(--cold);
     font-weight: bold;
@@ -123,7 +132,8 @@
     color: var(--white);
 }
 
-.weakly-report-card {
+/* has(*) - if it has children the style will apply */
+.weakly-report-card:has(*) {
     background-color: var(--backgroundColorOne);
     display: flex;
     flex-direction: row;
@@ -136,6 +146,7 @@
     border-radius: 20px;
     box-shadow: 5px 10px 10px var(--boxShadow);
     cursor: pointer;
+    min-height: 0rem;
 }
 
 .report-card {
