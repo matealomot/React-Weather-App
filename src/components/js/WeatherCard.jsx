@@ -32,13 +32,10 @@ export default function WeatherCard(props) {
 	const maxTemperatureInCelsius = (props.maxTemp - 273.15).toFixed(2);
 	const weaklyReport = [];
 
-	/// Switches the value from true to false and vice versa on click which determines which card is displayed
 
 	function handleChange() {
 		setShowFiveDayForecast(prevBoolean => !prevBoolean)
 	}
-
-	/// Sets the latitude and longitude values into cityCoordinates state but only if the new values are different from the old ones; prevents sending fetch requests every time the card is clicked
 
 	function setCoords(lat, lon) {
 		setCityCoordinates(prevCoords => {
@@ -55,8 +52,6 @@ export default function WeatherCard(props) {
 		})
 		handleChange()
 	}
-
-	/// Checks if there was a change made to the cityCoordinates state and if so, makes a fetch request to retreive the 5 Day / 3 Hour forecast data based on Lon and Lat coordinates; extracts the array with the objects from the fetched data and breaks it into 5 separate arrays, each one corresponding to one of the 5 days and stores it into the fiveDayForcast state
 
 	useEffect(() => {
 		if(cityCoordinates.latitude != "" && cityCoordinates.longitude != "") {
@@ -87,8 +82,6 @@ export default function WeatherCard(props) {
       });
 		}
 	}, [cityCoordinates]);
-
-	/// Checks the Condition and Weather Type props value to determine which Image should be displayed in the weather card
 
 	function checkWeatherConditions(conditions, weatherType) {
 		if(conditions === "Clear") {
@@ -145,7 +138,6 @@ export default function WeatherCard(props) {
 		};
 	
 	}
-	/// Checks how high/low temperatuers are and depending on that assigns different styling to the spans containing the numbers
 
 	function checkWarmth(number) {
 		if(number <= 0) {
@@ -168,12 +160,8 @@ export default function WeatherCard(props) {
 		}
 	}
 
-	/// Depending on the time of day the array is going to be either 5 or 6 items long. We loop as many times as there are items in fiveDayForcast array.
-	/// For each loop, we create a div, and inside it we loop over the corresponding fiveDayForcast item (ex. first loop goes through first item, second loop through second, etc.) We push each div into the reportDays
 
 	if(fiveDayForcast.length > 0) {
-		// const isSixDays = weatherData.length === 6;
-		// for (let i = 0; i < (isSixDays ? 6 : 5); i++)
 		
 		for (let i = 0; i < fiveDayForcast.length; i++) {
 			weaklyReport.push(
@@ -213,7 +201,7 @@ export default function WeatherCard(props) {
 		<div className="result" style={props.style} onClick={() => {setCoords(props.coordLat, props.coordLon)}}>
 			{
 				showFiveDayForecast
-				? /// Displayed if showFiveDayForecast is true
+				?
 					<div className="weakly-report-card">
 						{
 							isLoading ?
@@ -222,7 +210,7 @@ export default function WeatherCard(props) {
 							weaklyReport
 						}
 					</div>
-				: /// Displayed if showFiveDayForecast is false
+				:
 				<div className="daily-report-card">
 
 					<div className="weather-image">

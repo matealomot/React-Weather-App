@@ -132,7 +132,6 @@
     color: var(--white);
 }
 
-/* has(*) - if it has children the style will apply */
 .weakly-report-card:has(*) {
     background-color: var(--backgroundColorOne);
     display: flex;
@@ -172,7 +171,7 @@
 	transform: translateX(-100%);
 	animation-name: slide-in;
   animation-duration: 0.8s;
-  animation-fill-mode: forwards; /* Keeps the item in its final state after the animation ends */
+  animation-fill-mode: forwards;
   animation-timing-function: ease-in;
 }
 
