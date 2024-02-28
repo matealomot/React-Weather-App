@@ -132,20 +132,22 @@
     color: var(--white);
 }
 
+/* has(*) - if it has children the style will apply */
 .weakly-report-card:has(*) {
-    background-color: var(--backgroundColorOne);
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-around;
-    width: 80vw;
-    margin: 20px auto 20px auto;
-    padding: 1rem 0.5rem 1rem 0.5rem;
-    border: 1px solid var(--borderColor);
-    border-radius: 20px;
-    box-shadow: 5px 10px 10px var(--boxShadow);
-    cursor: pointer;
-    min-height: 0rem;
+	background-color: var(--backgroundColorOne);
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	justify-content: space-around;
+	max-height: 0rem;
+	width: 80vw;
+	margin: 20px auto 20px auto;
+	padding: 1rem 0.5rem 1rem 0.5rem;
+	border: 1px solid var(--borderColor);
+	border-radius: 20px;
+	box-shadow: 5px 10px 10px var(--boxShadow);
+	cursor: pointer;
+	overflow: hidden;
 }
 
 .report-card {
@@ -175,6 +177,16 @@
   animation-timing-function: ease-in;
 }
 
+.weakly-report-card.animate {
+  animation-name: open-up; 
+  animation-duration: 2s; 
+  animation-fill-mode: forwards; 
+  animation-timing-function: ease-in-out; 
+}
+.weakly-report-card.loading {
+	max-height: 10rem;
+}
+
 @keyframes slide-in {
   from {
     transform: translateX(-100%);
@@ -182,6 +194,15 @@
   to {
     transform: translateX(0);
   }
+}
+
+@keyframes open-up {
+    from {
+        max-height: 0rem;
+    }
+    to {
+        max-height: 1000rem;
+    }
 }
 
 

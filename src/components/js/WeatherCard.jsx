@@ -25,13 +25,13 @@ export default function WeatherCard(props) {
 	const [fiveDayForcast, setFiveDayForcast] = useState([])
 	const [showFiveDayForecast, setShowFiveDayForecast] = useState(false)
 	const [isLoading, setIsLoading] = useState(false);
+	const [animateReportCard, setAnimateReportCard] = useState(false);
 	
 	const temperatureInCelsius = (props.temp - 273.15).toFixed(2);
 	const temperatureFeelsLike = (props.tempFeels - 273.15).toFixed(2);
 	const minTemperatureInCelsius = (props.minTemp - 273.15).toFixed(2);
 	const maxTemperatureInCelsius = (props.maxTemp - 273.15).toFixed(2);
 	const weaklyReport = [];
-
 
 	function handleChange() {
 		setShowFiveDayForecast(prevBoolean => !prevBoolean)
@@ -48,10 +48,10 @@ export default function WeatherCard(props) {
 			}
 			else {
 				return prevCoords
-			}
-		})
-		handleChange()
-	}
+			};
+		});
+		handleChange();
+	};
 
 	useEffect(() => {
 		if(cityCoordinates.latitude != "" && cityCoordinates.longitude != "") {
@@ -75,10 +75,12 @@ export default function WeatherCard(props) {
 						}
 				}
 				setFiveDayForcast(arraysByDate);
+				setIsLoading(false);
 			})
 			.catch(err => console.log(err))
 			.finally(() => {
         setIsLoading(false);
+				setAnimateReportCard(true);
       });
 		}
 	}, [cityCoordinates]);
@@ -160,7 +162,6 @@ export default function WeatherCard(props) {
 		}
 	}
 
-
 	if(fiveDayForcast.length > 0) {
 		
 		for (let i = 0; i < fiveDayForcast.length; i++) {
@@ -202,7 +203,7 @@ export default function WeatherCard(props) {
 			{
 				showFiveDayForecast
 				?
-					<div className="weakly-report-card">
+					<div className={`weakly-report-card ${isLoading ? 'loading' : animateReportCard ? 'animate' : ''}`}>
 						{
 							isLoading ?
 							<h1>Fetching Data...</h1>
