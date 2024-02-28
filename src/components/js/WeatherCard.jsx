@@ -210,7 +210,7 @@ export default function WeatherCard(props) {
 
 
 	return (
-		<div onClick={() => {setCoords(props.coordLat, props.coordLon)}}>
+		<div className="result" style={props.style} onClick={() => {setCoords(props.coordLat, props.coordLon)}}>
 			{
 				showFiveDayForecast
 				? /// Displayed if showFiveDayForecast is true

@@ -1,3 +1,8 @@
 main {
     margin: 3rem 0 3rem 0;
 }
+
+.main--body {
+	position: relative;
+  overflow: hidden;
+}
