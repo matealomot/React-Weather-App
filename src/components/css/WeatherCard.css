@@ -178,10 +178,10 @@
 }
 
 .weakly-report-card.animate {
-  animation-name: open-up; 
-  animation-duration: 2s; 
-  animation-fill-mode: forwards; 
-  animation-timing-function: ease-in-out; 
+  animation-name: open-up;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 .weakly-report-card.loading {
 	max-height: 10rem;

@@ -35,9 +35,7 @@ export default function Main(props) {
 
 	return (
 		<main>
-			<div className="main--body">
-				{weatherReport}
-			</div>
+			{weatherReport}
 		</main>
 	)
 };
