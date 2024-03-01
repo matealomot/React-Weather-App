@@ -25,7 +25,7 @@ export default function Main(props) {
         coordLon={data.coord.lon}
         coordLat={data.coord.lat}
         condition={data.weather[0].main}
-        style={{ animationDelay: `${index * 0.5}s` }}
+        style={{ animationDelay: `${index * 0.5}s` }} // This line applies the dynamic delay
         />
 		));
 	} 

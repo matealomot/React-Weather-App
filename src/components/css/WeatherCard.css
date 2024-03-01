@@ -139,7 +139,6 @@
 	flex-direction: row;
 	align-items: start;
 	justify-content: space-around;
-	max-height: 0rem;
 	width: 80vw;
 	margin: 20px auto 20px auto;
 	padding: 1rem 0.5rem 1rem 0.5rem;
@@ -178,8 +177,9 @@
 }
 
 .weakly-report-card.animate {
+	transform-origin: top;
   animation-name: open-up;
-  animation-duration: 2s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
@@ -198,10 +198,10 @@
 
 @keyframes open-up {
     from {
-        max-height: 0rem;
+        transform: scaleY(0);
     }
     to {
-        max-height: 1000rem;
+        transform: scaleY(1);
     }
 }
 
