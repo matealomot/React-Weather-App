@@ -64,14 +64,14 @@ export default function WeatherCard(props) {
 				const arraysByDate = [];
 
 				for(let i = 0; i < dataArray.length; i++) {
-						const date = dataArray[i].dt_txt.split(" ")[0]; // Extract the date from the dt_txt property
-						const existingArray = arraysByDate.find(arr => arr[0]?.dt_txt.split(" ")[0] === date); // returns undefined if no match, returns the matching array (arr) if match is found
+						const date = dataArray[i].dt_txt.split(" ")[0];
+						const existingArray = arraysByDate.find(arr => arr[0]?.dt_txt.split(" ")[0] === date);
 
 						if(existingArray) {
-								existingArray.push(dataArray[i]); // Add the item to the existing array
+								existingArray.push(dataArray[i]);
 						} 
 						else{
-								arraysByDate.push([dataArray[i]]); // Create a new array with the item and add it to arraysByDate
+								arraysByDate.push([dataArray[i]]);
 						}
 				}
 				setFiveDayForcast(arraysByDate);
