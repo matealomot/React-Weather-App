@@ -22,7 +22,7 @@ header div {
 
 header div > input {
   padding: 15px;
-  width: 20rem;
+  width: 25vw;
   border: 1px solid orangered;
   border-top-left-radius: 5em;
   border-bottom-left-radius: 5em;
@@ -43,4 +43,63 @@ button {
 button:hover {
   background-color: #d35320;
   box-shadow: 0 0 3px #ffffff;
+}
+
+@media only screen and (max-width: 992px) {
+  header {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-height: 20vh;
+  } 
+
+  header div {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header img {
+    max-width: 20rem;
+  }
+
+  header div > input {
+    padding: 0.7rem;
+    width: 30vw;
+  }
+
+  header button {
+    padding: 0.7rem;
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  header {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 20vh;
+  }
+
+  header img {
+    width: 15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header div {
+    margin-bottom: 0.5rem;
+  }
+
+  header div > input {
+    padding: 0.7rem;
+    width: 65vw;
+  }
+
+  header button {
+    padding: 0.7rem;
+  }
 }

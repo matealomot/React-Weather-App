@@ -1,135 +1,132 @@
 :root {
-    --white: #ffffff;
-    --borderColor: #db3f06;
-    --backgroundColorOne: #FF7942;
-    --hoverBackground: #eb7243;
-    --boxShadow: #7a7575;
-    --numbers: #383d46; 
-    --cold: rgb(31, 12, 207);
-    --chilly: rgb(38, 156, 196);
-    --cool: #a3bec7;
-    --warm: #e95656;
-    --hot: #eb2727;
-    --heatwave: #920c0c;
-    --coldBorder: #0101aa;
+	--white: #ffffff;
+	--borderColor: #db3f06;
+	--backgroundColorOne: #FF7942;
+	--hoverBackground: #eb7243;
+	--boxShadow: #7a7575;
+	--numbers: #383d46; 
+	--cold: rgb(31, 12, 207);
+	--chilly: rgb(38, 156, 196);
+	--cool: #a3bec7;
+	--warm: #e95656;
+	--hot: #eb2727;
+	--heatwave: #920c0c;
+	--coldBorder: #0101aa;
 }
 
 .loader {
-    margin-inline: auto;
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--backgroundColorOne);
-    width: 30vw;
-    border-radius: 10px;
+	margin-inline: auto;
+	text-align: center;
+	padding: 2rem;
+	background-color: var(--backgroundColorOne);
+	width: 30vw;
+	border-radius: 10px;
 }
 
 .cold {
-    background-color: var(--cold);
-    font-weight: bold;
-    color: var(--white);
-    padding: 2px 5px 2px 5px;
-    border-radius: 6px;
-    border: 1px solid var(--coldBorder);
+	background-color: var(--cold);
+	font-weight: bold;
+	color: var(--white);
+	padding: 2px 5px 2px 5px;
+	border-radius: 6px;
+	border: 1px solid var(--coldBorder);
     
 }
 .chilly {
-    background-color: var(--chilly);
-    font-weight: 700;
-    color: var(--white);
-    padding: 2px 5px 2px 5px;
-    border-radius: 6px;
-    border: 1px solid var(--coldBorder)
+	background-color: var(--chilly);
+	font-weight: 700;
+	color: var(--white);
+	padding: 2px 5px 2px 5px;
+	border-radius: 6px;
+	border: 1px solid var(--coldBorder)
 }
 .cool {
-    background-color: var(--cool);
-    font-weight: bold;
-    color: var(--white);
-    padding: 2px 5px 2px 5px;
-    border-radius: 6px;
-    border: 1px solid var(--coldBorder)
+	background-color: var(--cool);
+	font-weight: bold;
+	color: var(--white);
+	padding: 2px 5px 2px 5px;
+	border-radius: 6px;
+	border: 1px solid var(--coldBorder)
 }
 .warm {
-    background-color: var(--warm);
-    font-weight: bold;
-    color: var(--white);
-    padding: 2px 5px 2px 5px;
-    border-radius: 6px;
-    border: 1px solid var(--borderColor)
+	background-color: var(--warm);
+	font-weight: bold;
+	color: var(--white);
+	padding: 2px 5px 2px 5px;
+	border-radius: 6px;
+	border: 1px solid var(--borderColor)
 }
 .hot {
-    background-color: var(--hot);
-    font-weight: bold;
-    color: var(--white);
-    padding: 2px 5px 2px 5px;
-    border-radius: 6px;
-    border: 1px solid var(--borderColor)
+	background-color: var(--hot);
+	font-weight: bold;
+	color: var(--white);
+	padding: 2px 5px 2px 5px;
+	border-radius: 6px;
+	border: 1px solid var(--borderColor)
 }
 .heatWave {
-    background-color: var(--heatwave);
-    font-weight: bold;
-    color: var(--white);
-    padding: 2px 5px 2px 5px;
-    border-radius: 6px;
-    border: 1px solid var(--borderColor)
+	background-color: var(--heatwave);
+	font-weight: bold;
+	color: var(--white);
+	padding: 2px 5px 2px 5px;
+	border-radius: 6px;
+	border: 1px solid var(--borderColor)
 }
-
-
-
 .daily-report-card {
-    background-color: var(--backgroundColorOne);
-    display: flex;
-    flex-direction: row;
-    width: 80vw;
-    gap: 1rem;
-    margin: 20px auto 20px auto;
-    padding: 1rem 0.5rem 1rem 0.5rem;
-    border: 1px solid var(--borderColor);
-    border-radius: 20px;
-    box-shadow: 5px 10px 10px var(--boxShadow);
-    cursor: pointer;
+	background-color: var(--backgroundColorOne);
+	display: flex;
+	flex-direction: row;
+	width: 80vw;
+	gap: 1rem;
+	margin: 20px auto 20px auto;
+	padding: 1rem 0.5rem 1rem 0.5rem;
+	border: 1px solid var(--borderColor);
+	border-radius: 20px;
+	box-shadow: 5px 10px 10px var(--boxShadow);
+	cursor: pointer;
 }
 
 .weather-image {
-    flex: 1;
-    max-width: 15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	flex: 1;
+	max-width: 15rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .weather-card {
-    flex: 1;
+	flex: 1;
 }
 
 .weather-card p {
-    line-height: 2rem;
-    letter-spacing: 1px;
+	line-height: 2rem;
+	letter-spacing: 1px;
 }
 
 .weather-card h2 {
-    color: var(--white);
-    text-shadow: 0 0 5px var(--boxShadow);
-    margin-bottom: 0.5rem;
+	color: var(--white);
+	text-shadow: 0 0 5px var(--boxShadow);
+	margin-bottom: 0.5rem;
 }
 
 .weather-card h4 {
-    display: inline;
+	display: inline;
 }
 
 .conditions {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .numeralValue {
-    font-weight: bold;
-    background-color: var(--numbers);
-    color: var(--white);
-    padding: 2px 5px 2px 5px;
-    border-radius: 6px;
+	font-weight: bold;
+	background-color: var(--numbers);
+	color: var(--white);
+	padding: 2px 5px 2px 5px;
+	border-radius: 6px;
 }
 
 .geo-cords {
-    color: var(--white);
+	color: var(--white);
 }
 
 /* has(*) - if it has children the style will apply */
@@ -150,22 +147,22 @@
 }
 
 .report-card {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .report-card div:first-child {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 }
 
 .report-card div:last-child {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 
 .daily-report-card:hover, .weakly-report-card:hover {
-    background-color: var(--hoverBackground);
+	background-color: var(--hoverBackground);
 }
 
 .result {
@@ -198,11 +195,125 @@
 
 @keyframes open-up {
     from {
-        transform: scaleY(0);
+			transform: scaleY(0);
     }
     to {
-        transform: scaleY(1);
+			transform: scaleY(1);
     }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1500px) {
+	.weakly-report-card:has(*) {
+		background-color: var(--backgroundColorOne);
+		display: flex;
+		flex-direction: row;
+		align-items: start;
+		justify-content: space-around;
+		gap: 5px;
+		width: 90vw;
+		margin: 20px auto 20px auto;
+		padding: 1rem 0.5rem 1rem 0.5rem;
+		border: 1px solid var(--borderColor);
+		border-radius: 20px;
+		box-shadow: 5px 10px 10px var(--boxShadow);
+		cursor: pointer;
+		overflow: hidden;
+	}
+
+	.weather--report {
+		width: 17vw !important;
+	}
+
+}
+
+@media only screen and (min-width: 770px) and (max-width: 992px) {
+  .weakly-report-card:has(*) {
+		background-color: var(--backgroundColorOne);
+		display: flex;
+		flex-direction: row;
+		align-items: start;
+		justify-content: space-around;
+		gap: 5px;
+		width: 96vw;
+		margin: 20px auto 20px auto;
+		padding: 1rem 0.5rem 1rem 0.5rem;
+		border: 1px solid var(--borderColor);
+		border-radius: 20px;
+		box-shadow: 5px 10px 10px var(--boxShadow);
+		cursor: pointer;
+		overflow: hidden;
+	}
+
+	.weather--report {
+		width: 18vw !important;
+	}
+
+}
+
+@media only screen and (max-width: 769px) {
+	.weakly-report-card:has(*) {
+		background-color: var(--backgroundColorOne);
+		display: flex;
+		flex-direction: row;
+		align-items: start;
+		justify-content: space-around;
+		gap: 5px;
+		width: 96vw;
+		margin: 20px auto 20px auto;
+		padding: 1rem 0.5rem 1rem 0.5rem;
+		border: 1px solid var(--borderColor);
+		border-radius: 20px;
+		box-shadow: 5px 10px 10px var(--boxShadow);
+		cursor: pointer;
+		overflow: hidden;
+	}
+
+	.weather--report {
+		width: 18vw !important;
+	}
+}
+
+
+@media only screen and (max-width: 685px) {
+	.daily-report-card {
+		background-color: var(--backgroundColorOne);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 80vw;
+		gap: 1rem;
+		margin: 20px auto 20px auto;
+		padding: 1rem 0.5rem 1rem 0.5rem;
+		border: 1px solid var(--borderColor);
+		border-radius: 20px;
+		box-shadow: 5px 10px 10px var(--boxShadow);
+		cursor: pointer;
+	}
+
+  .weakly-report-card:has(*) {
+		background-color: var(--backgroundColorOne);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		width: 80vw;
+		margin: 20px auto 20px auto;
+		padding: 1rem 0.5rem 1rem 0.5rem;
+		border: 1px solid var(--borderColor);
+		border-radius: 20px;
+		box-shadow: 5px 10px 10px var(--boxShadow);
+		cursor: pointer;
+		overflow: hidden;
+	}
+
+	.weather--report {
+		width: 65vw !important;
+	}
+
+	.report-card {
+		margin-bottom: 1rem;
+	}
+
 }
 
 
